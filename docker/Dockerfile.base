@@ -1,4 +1,4 @@
-FROM cyberdojofoundation/java-17:75e592a
+FROM cyberdojofoundation/java-18:56979b4
 LABEL maintainer=jon@jaggersoft.com
 
 COPY /jars/* /approval/
