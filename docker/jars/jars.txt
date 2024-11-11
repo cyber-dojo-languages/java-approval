@@ -1,0 +1,7 @@
+This file contains the locations to download the relevant .jar files
+Current version number in parentheses
+
+(24.9.0) https://mvnrepository.com/artifact/com.approvaltests/approvaltests
+(24.9.0) https://mvnrepository.com/artifact/com.approvaltests/approvaltests-util
+(2.1.3)  https://mvnrepository.com/artifact/jakarta.mail/jakarta.mail-api
+(1.11.3) https://mvnrepository.com/artifact/org.junit.platform/junit-platform-console-standalone
