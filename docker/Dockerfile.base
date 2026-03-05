@@ -3,5 +3,3 @@ LABEL maintainer=jon@jaggersoft.com
 
 COPY /jars/* /approval/
 ENV CLASSPATH=/approval/
-
-COPY red_amber_green.rb /usr/local/bin
