@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Declares only the libraries a kata names directly. Everything else they
+     drag in (approvaltests-util and the mail API among them) is resolved from
+     here rather than listed, so the set of jars in the image is consistent by
+     construction instead of by somebody keeping a list in step by hand.
+
+     The versions below are a starting point, not the versions installed.
+     install_jars.sh moves each to its newest release before resolving. -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.cyber-dojo</groupId>
+  <artifactId>java-approval-jars</artifactId>
+  <version>1</version>
+  <packaging>pom</packaging>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.approvaltests</groupId>
+      <artifactId>approvaltests</artifactId>
+      <version>24.9.0</version>
+    </dependency>
+    <!-- The runner a kata's tests are executed by, a single self-contained jar
+         holding the JUnit platform, its engines and its console. -->
+    <dependency>
+      <groupId>org.junit.platform</groupId>
+      <artifactId>junit-platform-console-standalone</artifactId>
+      <version>1.11.3</version>
+    </dependency>
+  </dependencies>
+
+</project>
