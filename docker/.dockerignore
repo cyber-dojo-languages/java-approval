@@ -1,5 +1,7 @@
 *
 !pom.xml
 !install_jars.sh
+!compile_reporter_jar.sh
+!reporter/
 !record_aot_caches.sh
 !throwaway_kata/

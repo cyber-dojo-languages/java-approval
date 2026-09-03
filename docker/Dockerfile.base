@@ -12,6 +12,13 @@ COPY install_jars.sh /tmp/
 RUN bash /tmp/install_jars.sh /approval \
  && rm -f /tmp/install_jars.sh
 
+# The reporter a kata names when an approval does not match. It goes in with the
+# resolved jars, so it is on a kata's classpath without cyber-dojo.sh naming it.
+COPY reporter /tmp/reporter
+COPY compile_reporter_jar.sh /tmp/
+RUN bash /tmp/compile_reporter_jar.sh /approval \
+ && rm -rf /tmp/compile_reporter_jar.sh /tmp/reporter
+
 # A kata's test run reads the two AOT caches this leaves in /aot, one for the
 # JVM that compiles and one for the JVM that runs the tests, instead of loading
 # those classes from the jars again on every [test] press. The script explains
